@@ -1,0 +1,12 @@
+<div class="calc_back">
+
+    <input type="text" placeholder="0" class="inputNum">
+    
+    <mat-grid-list cols="4" rowHeight="60px" [gutterSize]="'10px'">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+            [style.background]="tile.color" [style.color]="tile.fontColor" [style.font-size]="tile.fontSize"
+            [style.border-radius]="tile.border" >
+            {{tile.text}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
